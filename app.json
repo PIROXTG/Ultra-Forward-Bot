@@ -38,8 +38,8 @@
       "value": "document"
     },
     "DATABASE_URI": {
-      "description": "Your MongoDB Uri"
-      "value": ""
+      "description": "Your MongoDB Uri",
+      "value": "start"
     }
   },
   "formation": {
