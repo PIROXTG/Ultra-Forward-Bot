@@ -1,10 +1,6 @@
 import datetime
 from os import environ 
 
-#Dont Remove My Credit @Silicon_Bot_Update 
-#This Repo Is By @Silicon_Official 
-# For Any Kind Of Error Ask Us In Support Group @Silicon_Botz 
-
 class Config:
     API_ID = environ.get("API_ID", "")
     API_HASH = environ.get("API_HASH", "")
@@ -17,11 +13,6 @@ class Config:
     FORCE_SUB_CHANNEL = environ.get("FORCE_SUB_CHANNEL", "") 
     FORCE_SUB_ON = environ.get("FORCE_SUB_ON", "True")
     PORT = environ.get('PORT', '8080')
-    
-#Dont Remove My Credit @Silicon_Bot_Update 
-#This Repo Is By @Silicon_Official 
-# For Any Kind Of Error Ask Us In Support Group @Silicon_Botz 
-
    
 class temp(object): 
     lock = {}
@@ -29,7 +20,3 @@ class temp(object):
     forwardings = 0
     BANNED_USERS = []
     IS_FRWD_CHAT = []
-    
-#Dont Remove My Credit @Silicon_Bot_Update 
-#This Repo Is By @Silicon_Official 
-# For Any Kind Of Error Ask Us In Support Group @Silicon_Botz 

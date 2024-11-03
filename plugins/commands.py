@@ -11,19 +11,13 @@ from translation import Translation
 from pyrogram import Client, filters, enums, __version__ as pyrogram_version
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, InputMediaDocument
 
-#Dont Remove My Credit @Silicon_Bot_Update 
-#This Repo Is By @Silicon_Official 
-# For Any Kind Of Error Ask Us In Support Group @Silicon_Botz 
-
 main_buttons = [[
         InlineKeyboardButton('❗️ʜᴇʟᴘ', callback_data='help')
         ],[
-        InlineKeyboardButton('📜 sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url='https://t.me/Silicon_Botz'),
-        InlineKeyboardButton('📢 ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ', url='https://t.me/Silicon_Bot_Update')
+        InlineKeyboardButton('📢 ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ', url='https://t.me/piroxbots')
         ],[
         InlineKeyboardButton('💳 ᴅᴏɴᴀᴛᴇ', callback_data='donate')
         ]]
-#===================Start Function===================#
 
 @Client.on_message(filters.private & filters.command(['start']))
 async def start(client, message):
@@ -62,11 +56,6 @@ async def start(client, message):
         reply_markup=InlineKeyboardMarkup(main_buttons),
         text=Translation.START_TXT.format(message.from_user.first_name))
 
-#Dont Remove My Credit @Silicon_Bot_Update 
-#This Repo Is By @Silicon_Official 
-# For Any Kind Of Error Ask Us In Support Group @Silicon_Botz 
-
-#==================Restart Function==================#
 
 @Client.on_message(filters.private & filters.command(['restart']) & filters.user(Config.BOT_OWNER_ID))
 async def restart(client, message):
@@ -95,10 +84,6 @@ async def helpcb(bot, query):
             ]]
         ))
 
-#Dont Remove My Credit @Silicon_Bot_Update 
-#This Repo Is By @Silicon_Official 
-# For Any Kind Of Error Ask Us In Support Group @Silicon_Botz 
-
 @Client.on_callback_query(filters.regex(r'^how_to_use'))
 async def how_to_use(bot, query):
     await query.message.edit_text(
@@ -115,9 +100,6 @@ async def back(bot, query):
        text=Translation.START_TXT.format(
                 query.from_user.first_name))
 
-#Dont Remove My Credit @Silicon_Bot_Update 
-#This Repo Is By @Silicon_Official 
-# For Any Kind Of Error Ask Us In Support Group @Silicon_Botz 
 
 @Client.on_callback_query(filters.regex(r'^about'))
 async def about(bot, query):
@@ -128,9 +110,6 @@ async def about(bot, query):
         parse_mode=enums.ParseMode.HTML,
     )
     
-#Dont Remove My Credit @Silicon_Bot_Update 
-#This Repo Is By @Silicon_Official 
-# For Any Kind Of Error Ask Us In Support Group @Silicon_Botz 
 
 @Client.on_callback_query(filters.regex(r'^donate'))
 async def donate(bot, query):
@@ -168,10 +147,6 @@ def format_uptime():
     uptime_str = f"{int(days)} days, {int(hours)} hours, {int(minutes)} minutes, {int(seconds)} seconds"
     return uptime_str
 
-#Dont Remove My Credit @Silicon_Bot_Update 
-#This Repo Is By @Silicon_Official 
-# For Any Kind Of Error Ask Us In Support Group @Silicon_Botz 
-
 @Client.on_callback_query(filters.regex(r'^status'))
 async def status(bot, query):
     users_count, bots_count = await db.total_users_bots_count()
@@ -189,9 +164,6 @@ async def status(bot, query):
         disable_web_page_preview=True,
     )
 
-#Dont Remove My Credit @Silicon_Bot_Update 
-#This Repo Is By @Silicon_Official 
-# For Any Kind Of Error Ask Us In Support Group @Silicon_Botz 
 
 @Client.on_callback_query(filters.regex(r'^server_status'))
 async def server_status(bot, query):
@@ -205,14 +177,9 @@ async def server_status(bot, query):
         disable_web_page_preview=True,
     )
 
-#Dont Remove My Credit @Silicon_Bot_Update 
-#This Repo Is By @Silicon_Official 
-# For Any Kind Of Error Ask Us In Support Group @Silicon_Botz 
-
-#===================Donate Function===================#
 
 @Client.on_message(filters.private & filters.command(['donate']))
 async def restart(client, message):
     msg = await message.reply_text(
-        text="<i>__If you liked my service❤__.\n\nConsider and make a donation to support my developer 👦\n\n\nUPI ID - `pay-to-yash-singh@fam`</i>"
+        text="<i>__If you liked my service❤__.\n\nConsider and make a donation to support my developer 👦\n\n\nContact Admin - `@piroxtg`</i>"
         )
